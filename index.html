@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment 10</title>
+</head>
+<body>
+    <h2>Assessment 10 - Qus.no.08</h2>
+<script>
+// Write a JavaScript program that ask the user to calculate Discount that takes an amount and a discount percentage 
+//as parameters and display the discounted amount after applying the discount. 
+
+function calculateDiscount(amount, discountPercentage) {
+  // Calculate the discounted amount
+  const discountAmount = (amount * discountPercentage) / 100;
+  const discountedPrice = amount - discountAmount;
+  return discountedPrice;
+}
+
+// Ask the user to enter the amount and discount percentage
+const amountInput = prompt("Enter the original amount:");
+const discountPercentageInput = prompt("Enter the discount percentage:");
+
+// Convert the inputs to numbers
+const originalAmount = parseFloat(amountInput);
+const discountPercentage = parseFloat(discountPercentageInput);
+
+// Check if the inputs are valid numbers
+if (isNaN(originalAmount) || isNaN(discountPercentage) || discountPercentage < 0 || discountPercentage > 100) {
+  alert("Please enter valid numbers for the amount and discount percentage.");
+} else {
+  // Calculate the discounted amount and display the result
+  const discountedAmount = calculateDiscount(originalAmount, discountPercentage);
+  alert(`Discounted Amount: $${discountedAmount.toFixed(2)}`);
+}
+
+</script>
+</body>
+</html>
